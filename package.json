@@ -1,11 +1,23 @@
 {
   "name": "react-relative-timer",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theekshanawj/react-relative-timer.git"
+  },
+  "author": "Theekshana Wijesinghe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theekshanawj/react-relative-timer/issues"
+  },
+  "homepage": "https://github.com/theekshanawj/react-relative-timer#readme",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3"
@@ -14,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-component": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +43,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-env": "^7.12.0",
+    "babel-loader": "^8.1.0",
+    "webpack-cli": "^4.0.0"
   }
 }
