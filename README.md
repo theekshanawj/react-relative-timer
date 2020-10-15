@@ -39,28 +39,28 @@ import ReactRelativeTimer from 'react-relative-timer';
      />
    }
 ```
-String returned by the `formatMessage` will be the output of this component. The time difference between the `referenceTime` and current time is the parameter (Time Object) passed ot `formatMessage` function.
+String returned by the `formatMessage` will be the output of this component. The time difference between the `referenceTime` and current time is the parameter (Time Object) passed to the `formatMessage` function.
 
 ### API Specification
 
 
 |Prop|Usage| Type |Default Value|Example|
 |---|---|---|---|---|
-|referenceTime| Timer uses this time as a base to calculate the time difference| Number (in milliseconds)| `Date.now()` | 1602781020000|
+|referenceTime| Timer uses this time as the base to calculate the time difference| Number (in milliseconds)| `Date.now()` | 1602781020000|
 |updateInterval| Interval the output should be updated| Number (in milliseconds) | 10000 | 600000|
-|formatMessage| Format the output of the component. Should return a string with the expected display text| Function (param: Time Object) | `({ totalSeconds, referenceTime }) => '${totalSeconds} passed from ${new Date(referenceTime)}'`| `({ minutes}) => '${minutes}min ago`
+|formatMessage| Format the output of the component. Should return a string with the expected display text| Function (param: Time Object) | `({ totalSeconds, referenceTime }) => '${totalSeconds} passed from ${new Date(referenceTime)}'`| `({ minutes }) => '${minutes}min ago`
 |now| Difference between `now` and `referenceTime` is used in the counter. Override this if you want `current` time to be something other than current epoch time | Function | `() => Date.now()` | `() => Date.now() + c`| 
 |clearTimer|If you want to stop the output being updated, override this function| Function (param: Time Object) | `() => false` | `({ hours}) => hours < 5`|
 |isStepUp| Decide on the step up or step down counter functionality| Boolean | `true` | `false`|
-| className | Use this to style output `div` by passing a CSS class name | String | `''` | `'timer'`|
-|dataId| Access the output using HTML | 'String' | `react-relative-timer` | `my-timer` |
+| className | Use this to style output `div` by passing a CSS class name | String | `''` | `timer`|
+|dataId| Access the output JS element selectors  | 'String' | `react-relative-timer` | `my-timer` |
 
 #### Timer Object
 
 For `formatMessage` and `clearTimer` functions a Timer Object is passed with following keys
 ```javascript
 {
-    totalMills,   // Diff between now() - referenceTime if stepUp or referenceTime - now() if step down
+    totalMills,   // Diff between now() - referenceTime if step up or referenceTime - now() if step down
     totalSeconds, // Diff in Seconds
     mills,        // How many milliseconds in the time diff
     seconds,      // How many seconds in the time diff
