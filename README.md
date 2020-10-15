@@ -6,7 +6,7 @@ This is inspired by the Github's `relative-time` and tries to allow maximum flex
 
 ### Basic usage 
 
-Say you have a Web application that shows user posted stories (like twitter) and want to show when the user posted the story; Ex:
+Say you have a web application that shows user posted stories (like twitter) and want to show when a user posted a story; Ex:
 posted a few seconds ago, posted 2 minutes ago, posted hours ago, posted days ago, ...  
 
 #### Install the dependency from npm
