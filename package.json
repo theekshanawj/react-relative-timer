@@ -1,6 +1,7 @@
 {
   "name": "react-relative-timer",
   "version": "1.0.0",
+  "description": "React timer component",
   "private": false,
   "main": "index.js",
   "repository": {
