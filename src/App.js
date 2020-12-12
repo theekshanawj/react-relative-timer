@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ReactRelativeTimer from './ReactRelativeTimer';
 
+// Render the relative time component
 function App() {
   return (
     <div className="App">
